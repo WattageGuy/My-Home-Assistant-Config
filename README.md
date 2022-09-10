@@ -170,6 +170,16 @@ action:
 mode: single
 
 ````
+
+**configuration.yaml**
+``````
+  - platform: template
+    sensors:
+      timer_m:
+        value_template: >
+            '00:', '{{ states('input_number.kokstimer_tid_minuter') }}', ':00
+``````
+
 ## Food Announcer - Matroparen:
 This card lets anyone broadcast a message to devices (made for food announcements):
 
@@ -285,3 +295,56 @@ action:
     data: {}
 mode: single
 `````
+
+## Value Templetes
+
+### Home Welcome message:
+**configuration.yaml**
+`````
+  - platform: template
+    sensors:
+      time_of_day:
+        value_template: >
+            {% if now().hour < 5 %}Dags att sova!
+            {% elif now().hour < 10 %}God morgon
+            {% elif now().hour < 13 %}God förmiddag
+            {% elif now().hour < 18 %}God eftermiddag
+            {% else %}God kväll{% endif %}
+``````
+
+### Week number:
+**configuration.yaml**
+`````
+  - platform: template
+    sensors:
+      week_number:
+        value_template: >
+            {{ now().strftime("%W") }}
+``````
+
+### Weather descriptions:
+**configuration.yaml**
+`````
+  - platform: template
+    sensors:
+      swedish_weather:
+        value_template: >
+            {%- set state = states('weather.smhi_home') -%}
+            {% if state == 'clear-night' %} Klar natt
+            {% elif state == 'cloudy' %} Målnigt
+            {% elif state == 'exceptional' %} Klart
+            {% elif state == 'fog' %} Dimmigt
+            {% elif state == 'hail' %} Hagel
+            {% elif state == 'lightning' %} Åska
+            {% elif state == 'lightning-rainy' %} Åska med regna
+            {% elif state == 'partlycloudy' %} Delvis molnligt
+            {% elif state == 'pouring' %} Lätt regn
+            {% elif state == 'rainy' %} Regn
+            {% elif state == 'snowy' %} Snö
+            {% elif state == 'snowy-rainy' %} Blötsnö
+            {% elif state == 'sunny' %} Solsken
+            {% elif state == 'windy' %} Blåsigt
+            {% elif state == 'windy-variant' %} Blåsigt
+            {% else %} Ingen data
+            {% endif %}
+``````
