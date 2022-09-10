@@ -250,4 +250,38 @@ cards:
 
 ````
 
+## Tapo integration to trigger motion alert to scrypted
 
+**configuration.yaml:**
+`````
+rest_command:
+  overvoning_motion:
+    url: "http://ip:11080/endpoint/47/public/"
+    method: post
+  undervaning_motion:
+    url: "http://ip:11080/endpoint/48/public/"
+    method: post
+  tvrum_motion:
+    url: "http://ip:11080/endpoint/58/public/"
+    method: post
+  garage_motion:
+    url: "http://ip:11080/endpoint/56/public/"
+    method: post
+`````
+
+**Automation example:**
+````
+alias: rest motion tvrum
+description: ""
+trigger:
+  - type: motion
+    platform: device
+    device_id: camera entity id
+    entity_id: binary_sensor.tv_rum_motion
+    domain: binary_sensor
+condition: []
+action:
+  - service: rest_command.tvrum_motion
+    data: {}
+mode: single
+`````
