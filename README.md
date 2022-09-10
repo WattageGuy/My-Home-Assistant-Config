@@ -52,9 +52,10 @@ I use a wall mounted iPad as a dashboard in kiosk mode. My kiosk works by having
 On dashboard home a kitchen timer can bee seen. This is how its made:
 
 You need:
-* Input helper
+* Input number helper: input_number.kokstimer_tid_minuter
 * Input boolean helper: input_boolean.kokstimer_ljud
 * Timer helper: timer.kokstimer
+* Script
 * Automation
 * numberbox-card
 * Browser mod
@@ -98,6 +99,24 @@ card_mod:
       margin-left: -10px;
     }
 ```
+
+**Script:**
+````
+alias: Sätt tid kökstimer
+sequence:
+  - service: timer.start
+    data:
+      duration: >-
+        {{ ((states('input_number.kokstimer_tid_minuter') | float * 60)) |
+        round(2) }}
+    target:
+      entity_id: timer.kokstimer
+  - service: input_boolean.turn_on
+    data: {}
+    target:
+      entity_id: input_boolean.kokstimer_ljud
+mode: single
+````
 
 **Automation:**
 ````
