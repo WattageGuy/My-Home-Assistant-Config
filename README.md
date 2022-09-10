@@ -46,7 +46,7 @@ I use a wall mounted iPad as a dashboard in kiosk mode. My kiosk works by having
 ### Lamps:
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/lamps.png" width="600">
 
-### Energi:
+### Energy:
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/energi.png" width="600">
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/energi-down.png" width="600">
 
@@ -60,12 +60,12 @@ I use a wall mounted iPad as a dashboard in kiosk mode. My kiosk works by having
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/cctv.png" width="600">
 
 ### Kökstimer - Kitchen timer
-On dashboard home a kitchen timer can bee seen. This is how its made:
+On dashboard home a kitchen timer can bee seen:
 
 You need:
-* Input number helper: input_number.kokstimer_tid_minuter
-* Input boolean helper: input_boolean.kokstimer_ljud
-* Timer helper: timer.kokstimer
+* input_number.kokstimer_tid_minuter
+* input_boolean.kokstimer_ljud
+* timer.kokstimer
 * Script
 * Automation
 * numberbox-card
@@ -170,8 +170,8 @@ action:
 mode: single
 
 ````
-## Food Anouncer - Matroparen:
-This card lets anyone broadcast a message to devices (made for food announcments):
+## Food Announcer - Matroparen:
+This card lets anyone broadcast a message to devices (made for food announcements):
 
 You need:
 * input_select.matroparen_vem
