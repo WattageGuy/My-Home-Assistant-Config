@@ -183,7 +183,7 @@ You need:
 
 **Node-RED:**
 
-<details open>
+<details closed>
 <summary>Node-RED Flow JSON</summary>
 <br>
 Import this into Node-RED:
@@ -249,4 +249,5 @@ cards:
         }
 
 ````
-s
+
+
