@@ -39,13 +39,24 @@ This is my personal Home Assistant config including dashboard, automations etc
 ## Dashboard/Lovelace
 I use a wall mounted iPad as a dashboard in kiosk mode. My kiosk works by having fullscreen in HA companion app and using Lovelace Wallpanel Screensaver from HACS that includes both a kiosk mode and a screen saver.
 
+### Home:
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/home.png" width="600">
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/home-down.png" width="600">
+
+### Lamps:
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/lamps.png" width="600">
+
+### Energi:
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/energi.png" width="600">
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/energi-down.png" width="600">
+
+### Media:
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/media.png" width="600">
+
+### Sensors:
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/sensors.png" width="600">
+
+### CCTV:
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/cctv.png" width="600">
 
 ### Kökstimer - Kitchen timer
