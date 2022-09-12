@@ -22,7 +22,6 @@ This is my personal Home Assistant config including dashboard, automations etc
 * Sonoff
 * Tapo
 * Tibber
-* Yale
 
 ## HACS Frontend
 * Weather card
