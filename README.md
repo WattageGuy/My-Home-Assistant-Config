@@ -187,7 +187,7 @@ mode: single
             '00:', '{{ states('input_number.kokstimer_tid_minuter') }}', ':00
 ``````
 
-## Food Announcer - Matroparen:
+## Matroparen - Food Announcer
 This card lets anyone broadcast a message to devices (made for food announcements):
 
 To make your own, you need:
