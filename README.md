@@ -357,4 +357,5 @@ mode: single
 ``````
 
 ## cameradetect.py
-This makes it possible to check if someone is watching a camera in Scrypted and then logs it into discord (webhook).
+This makes it possible to check if someone is watching a camera in Scrypted and then logs it into discord (webhook). OBS! Must be Docker!
+Remember to add json-file driver logging options like max-file and max-size!
