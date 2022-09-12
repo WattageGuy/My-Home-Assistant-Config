@@ -54,7 +54,7 @@ I use a wall mounted iPad as a dashboard in kiosk mode. My kiosk works by having
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/media.png" width="600">
 
 ### Sensors:
-<img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/sensors.png" width="600">
+<img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/sensors2.png" width="600">
 
 ### CCTV:
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/cctv.png" width="600">
