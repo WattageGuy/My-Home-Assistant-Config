@@ -178,15 +178,6 @@ mode: single
 
 ````
 
-**configuration.yaml**
-``````
-  - platform: template
-    sensors:
-      timer_m:
-        value_template: >
-            '00:', '{{ states('input_number.kokstimer_tid_minuter') }}', ':00
-``````
-
 ## Matroparen - Food Announcer
 This card lets anyone broadcast a message to devices (made for food announcements):
 
