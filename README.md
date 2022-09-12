@@ -36,6 +36,14 @@ This is my personal Home Assistant config including dashboard, automations etc
 * iOS Dark Mode Theme
 * Lovelace Wallpanel Screensaver
 
+## Docker containers
+* Scrypted
+* OctoPrint
+* The Spaghetti Detective
+
+## Self hosted
+* [Tuya RTSPS](https://developer.tuya.com/en/docs/iot/rtsp?id=Kacsdjcqllyql)
+
 ## Dashboard/Lovelace
 I use a wall mounted iPad as a dashboard in kiosk mode. My kiosk works by having fullscreen in HA companion app and using Lovelace Wallpanel Screensaver from HACS that includes both a kiosk mode and a screen saver.
 
