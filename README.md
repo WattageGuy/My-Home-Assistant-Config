@@ -67,9 +67,9 @@ I use a wall mounted iPad as a dashboard in kiosk mode. My kiosk works by having
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/cctv.png" width="600">
 
 ### Kökstimer - Kitchen timer
-On dashboard home a kitchen timer can bee seen:
+On the home dashboard a kitchen timer can bee seen:
 
-You need:
+To make your own, you need:
 * input_number.kokstimer_tid_minuter
 * input_boolean.kokstimer_ljud
 * timer.kokstimer
@@ -190,7 +190,7 @@ mode: single
 ## Food Announcer - Matroparen:
 This card lets anyone broadcast a message to devices (made for food announcements):
 
-You need:
+To make your own, you need:
 * input_select.matroparen_vem
 * input_text.matroparen_text
 * switch.lovelace_button (Node-RED)
