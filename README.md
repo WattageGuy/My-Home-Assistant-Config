@@ -1,5 +1,5 @@
 # My-Home-Assistant-Config
-This is my personal Home Assistant config including dashboard, automations etc
+This is my personal Home Assistant/Home automation config including dashboard, automations etc
 
 ## Integrations
 * Browser mod
