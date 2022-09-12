@@ -355,3 +355,6 @@ mode: single
             {% else %} Ingen data
             {% endif %}
 ``````
+
+## cameradetect.py
+This makes it possible to check if someone is watching a camera in Scrypted and then logs it into discord (webhook).
