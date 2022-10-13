@@ -93,6 +93,7 @@ I use a wall mounted iPad as a dashboard in kiosk mode. My kiosk works by having
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/cctv.png" width="600">
 
 <a name="kitchen_timer"/>
+
 ### Kökstimer - Kitchen timer
 On the home dashboard a kitchen timer can bee seen:
 
@@ -206,6 +207,7 @@ mode: single
 ````
 
 <a name="food_announcer"/>
+
 ## Matroparen - Food Announcer
 This card lets anyone broadcast a message to devices (made for food announcements):
 
@@ -286,6 +288,7 @@ cards:
 
 ````
 <a name="tapo_scrypted"/>
+
 ## Tapo integration to trigger motion alert to scrypted
 
 **configuration.yaml:**
@@ -322,6 +325,7 @@ action:
 mode: single
 `````
 <a name="value_template"/>
+
 ## Value Templates
 
 ### Home Welcome message:
