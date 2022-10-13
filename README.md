@@ -1,6 +1,27 @@
 # My-Home-Assistant-Config
 This is my personal Home Assistant/Home automation config including dashboard, automations etc
 
+## Table of Contents  
+[Integrations](#Integrations)  
+[Dashboard](#dashboard) 
+</br>
+[Kitchen Timer](#kitchen_timer) 
+</br>
+[Food Announcer](#food_announcer) 
+</br>
+[Tapo cameras scrypted](#tapo_scrypted) 
+</br>
+[Value Templates](#value_template)
+</br>
+[Screensaver](#screensaver)
+</br>
+[EdgeOS MBytes to Mbit/s](#edgeos)
+</br>
+[Camera detect for stream](#cameradetect)
+</br>
+
+<a name="Integrations"/>
+
 ## Integrations
 * Browser mod
 * Generic Camera
@@ -23,6 +44,8 @@ This is my personal Home Assistant/Home automation config including dashboard, a
 * Tapo
 * Tibber
 * ESP Home
+* EdgeOS
+* Discord
 
 ## HACS Frontend
 * Weather card
@@ -45,6 +68,7 @@ This is my personal Home Assistant/Home automation config including dashboard, a
 ## Self hosted
 * [Tuya RTSPS](https://developer.tuya.com/en/docs/iot/rtsp?id=Kacsdjcqllyql)
 
+<a name="dashboard"/>
 ## Dashboard/Lovelace
 I use a wall mounted iPad as a dashboard in kiosk mode. My kiosk works by having fullscreen in HA companion app and using Lovelace Wallpanel Screensaver from HACS that includes both a kiosk mode and a screen saver.
 
@@ -68,6 +92,7 @@ I use a wall mounted iPad as a dashboard in kiosk mode. My kiosk works by having
 ### CCTV:
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/cctv.png" width="600">
 
+<a name="kitchen_timer"/>
 ### Kökstimer - Kitchen timer
 On the home dashboard a kitchen timer can bee seen:
 
@@ -180,6 +205,7 @@ mode: single
 
 ````
 
+<a name="food_announcer"/>
 ## Matroparen - Food Announcer
 This card lets anyone broadcast a message to devices (made for food announcements):
 
@@ -259,7 +285,7 @@ cards:
         }
 
 ````
-
+<a name="tapo_scrypted"/>
 ## Tapo integration to trigger motion alert to scrypted
 
 **configuration.yaml:**
@@ -295,8 +321,8 @@ action:
     data: {}
 mode: single
 `````
-
-## Value Templetes
+<a name="value_template"/>
+## Value Templates
 
 ### Home Welcome message:
 **configuration.yaml**
@@ -350,6 +376,8 @@ mode: single
 ``````
 
 ### Screensaver configuration
+
+<a name="screensaver"/>
 
 <img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/screensaver.jpg" width="600">
 
@@ -420,6 +448,22 @@ mode: single
         as_timestamp(states.sensor.electricity_price.last_changed))
         | timestamp_custom("%M", false) }} minuter sedan
 ``````
+
+<a name="edgeos"/>
+### EdgeOS MBytes to Mbit/s
+
+**configuration.yaml**
+`````
+      total_bandwidth_received:
+        friendly_name: 'Total bandwidth'
+        value_template: "{{states('sensor.edgeos_interface_eth0_internet_rate_received') | round(2) | float * 8 }}"
+        unit_of_measurement: "Mbps"
+      total_bandwidth_sent:
+        friendly_name: 'Total bandwidth'
+        value_template: "{{states('sensor.edgeos_interface_eth0_internet_rate_sent') | round(2) | float * 8 }}"
+        unit_of_measurement: "Mbps"
+``````
+<a name="cameradetect"/>
 
 ## cameradetect.py
 This makes it possible to check if someone is watching a camera in Scrypted and then logs it into discord (webhook). OBS! Must be Docker!
