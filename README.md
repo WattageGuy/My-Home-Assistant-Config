@@ -69,6 +69,7 @@ This is my personal Home Assistant/Home automation config including dashboard, a
 * [Tuya RTSPS](https://developer.tuya.com/en/docs/iot/rtsp?id=Kacsdjcqllyql)
 
 <a name="dashboard"/>
+
 ## Dashboard/Lovelace
 I use a wall mounted iPad as a dashboard in kiosk mode. My kiosk works by having fullscreen in HA companion app and using Lovelace Wallpanel Screensaver from HACS that includes both a kiosk mode and a screen saver.
 
