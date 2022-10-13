@@ -456,7 +456,7 @@ mode: single
 
 <a name="edgeos"/>
 
-### EdgeOS MBytes to Mbit/s
+### EdgeOS MBytes to Mbps
 
 **configuration.yaml**
 `````
