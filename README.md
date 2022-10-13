@@ -22,6 +22,7 @@ This is my personal Home Assistant/Home automation config including dashboard, a
 * Sonoff
 * Tapo
 * Tibber
+* ESP Home
 
 ## HACS Frontend
 * Weather card
@@ -34,6 +35,7 @@ This is my personal Home Assistant/Home automation config including dashboard, a
 * card-mod
 * iOS Dark Mode Theme
 * Lovelace Wallpanel Screensaver
+* lovelace-wallpanel
 
 ## Docker containers
 * Scrypted
@@ -345,6 +347,78 @@ mode: single
             {% elif state == 'windy-variant' %} Blåsigt
             {% else %} Ingen data
             {% endif %}
+``````
+
+### Screensaver configuration
+
+<img src="https://github.com/WattageGuy/My-Home-Assistant-Config/blob/main/images/screensaver.jpg" width="600">
+
+[lovelace-wallpanel](https://github.com/j-a-n/lovelace-wallpanel)
+
+**dashboard**
+`````
+  cards:
+    - type: custom:simple-clock-card
+      use_military: true
+      hide_seconds: false
+      font_size: 6rem
+      padding_size: 32px
+    - type: markdown
+      content: '{{ states(''sensor.date'') }}'
+      card_mod:
+        style: |
+          ha-card {
+            font-size: 40px;
+            text-align: center;
+            margin-top: -70px;
+             }
+    - type: custom:weather-card
+      entity: weather.home_hourly
+      number_of_forecasts: '0'
+      current: true
+      details: false
+      forecast: false
+      name: Hem
+      card_mod:
+        style: |
+          ha-card {
+            margin-top: -30px;
+             }
+    - type: custom:bignumber-card
+      scale: 40px
+      entity: sensor.electricity_price
+      title: Nuvarande elpris
+      card_mod:
+        style: |
+          ha-card {
+            background: none;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            margin-top: -10px;
+            padding-bottom: 20px;
+            margin-bottom: -20px
+             }
+    - type: gauge
+      entity: sensor.power
+      needle: false
+      min: 0
+      max: 3000
+      severity:
+        green: 0
+        yellow: 600
+        red: 1800
+      name: Nuvarande elförbrukning
+      card_mod:
+        style: |
+          ha-card {
+            border-radius: 0px;
+             }    
+    - type: custom:mushroom-title-card
+      title: ''
+      subtitle: >-
+        Uppdaterade elpris: {{ (as_timestamp(now()) -
+        as_timestamp(states.sensor.electricity_price.last_changed))
+        | timestamp_custom("%M", false) }} minuter sedan
 ``````
 
 ## cameradetect.py
