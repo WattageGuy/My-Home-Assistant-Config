@@ -1,4 +1,4 @@
-# My-Home-Assistant-Config (NO LONGER UPDATED, DEPRECATED)
+# My-Home-Assistant-Config (NO LONGER UPDATED) [DEPRECATED]
 This is my personal Home Assistant/Home automation config including dashboard, automations etc
 
 ## Table of Contents  
