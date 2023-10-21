@@ -1,5 +1,6 @@
 # ⛔️ DEPRECATED
 This is my personal Home Assistant/Home automation config including dashboard, automations etc
+(NO LONGER UPDATED)
 
 ## Table of Contents  
 [Integrations](#Integrations)  
